@@ -34,17 +34,17 @@ default-features = false
 package = "kzen-paillier"
 version = "0.4.3"
 default-features = false
+git = "https://github.com/Gimmi7/rust-paillier-cy"
+rev = "682c196e9055973ef24879a82e14ba80fb7d578c"
 
 [dev-dependencies]
 criterion = "0.3"
 
 [features]
-default = ["curv-kzen/rust-gmp-kzen"]
-num-bigint= ["curv-kzen/num-bigint","paillier/num-bigint"]
+default = ["curv-kzen/rust-gmp-kzen", "paillier/default"]
+num-bigint = ["curv-kzen/num-bigint", "paillier/num-bigint"]
 
 [[bench]]
 name = "all"
 harness = false
 
-[patch.crates-io]
-kzen-paillier= {git="https://github.com/Gimmi7/rust-paillier-cy", rev="682c196e9055973ef24879a82e14ba80fb7d578c"}
