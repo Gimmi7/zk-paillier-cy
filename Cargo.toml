@@ -40,6 +40,7 @@ criterion = "0.3"
 
 [features]
 default = ["curv-kzen/rust-gmp-kzen"]
+num-bigint= ["curv-kzen/num-bigint"]
 
 [[bench]]
 name = "all"
